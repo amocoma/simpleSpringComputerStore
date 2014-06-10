@@ -45,7 +45,7 @@
 				    <c:forEach items="${af.accounts}" var="account" varStatus="status">
 					   <tr>
 						   <td>${account.id}<input id="accounts[${status.index}].id" name="accounts[${status.index}].id" type="hidden" value="${account.id}" /></td>
-					       <td>${account.sfid}<input id="accounts[${status.index}].sfid" name="accounts[${status.index}].sfid" type="hidden" value="${account.sfdid}" /></td>
+					       <td>${account.sfid}<input id="accounts[${status.index}].sfid" name="accounts[${status.index}].sfid" type="hidden" value="${account.sfid}" /></td>
 					       <td><input id="accounts[${status.index}].name" name="accounts[${status.index}].name" placeholder="Name" class="form-control" value="${account.name}"/></td>
 					    </tr>
 					</c:forEach>
