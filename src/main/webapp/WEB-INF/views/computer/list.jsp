@@ -35,7 +35,7 @@
 			  <a class="navbar-brand" href="/">Computers database</a>
 			</div>
 			  <ul class="nav navbar-nav navbar-right">
-        		<li><a href="/sfdc/list">Browse SFDC Accounts</a></li>
+        		<li><a href="/sfdc/">Browse SFDC Accounts</a></li>
 			  </ul>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
