@@ -16,12 +16,12 @@ import javax.validation.constraints.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@SequenceGenerator(name="seqComputer", initialValue=1000, allocationSize=100)
+@SequenceGenerator(name="seqComputer", initialValue=1, allocationSize=100)
 public class Computer {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator="seqComputer")
-    public Long id;
+    public Integer id;
     
     @NotNull
     public String name;
@@ -37,11 +37,11 @@ public class Computer {
     @ManyToOne(cascade = CascadeType.MERGE)
     public Company company;
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

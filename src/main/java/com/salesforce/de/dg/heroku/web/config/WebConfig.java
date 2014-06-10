@@ -12,8 +12,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackages = { "com.salesforce.de.dg.heroku.controller",
-		"com.salesforce.de.dg.heroku.web.controller" })
+@ComponentScan(basePackages = { "com.salesforce.de.dg.heroku.web.controller" })
 public class WebConfig extends WebMvcConfigurerAdapter {
 
 	@Override

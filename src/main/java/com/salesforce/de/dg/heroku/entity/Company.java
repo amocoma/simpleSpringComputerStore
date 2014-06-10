@@ -9,7 +9,7 @@ import javax.persistence.SequenceGenerator;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@SequenceGenerator(name="seqCompany", initialValue=1000, allocationSize=100)
+@SequenceGenerator(name="seqCompany", initialValue=1, allocationSize=100)
 public class Company {
 
 	private static final long serialVersionUID = 1L;

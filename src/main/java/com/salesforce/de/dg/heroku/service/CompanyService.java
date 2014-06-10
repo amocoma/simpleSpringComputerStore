@@ -13,17 +13,19 @@ import org.springframework.stereotype.Service;
 import com.salesforce.de.dg.heroku.entity.Company;
 import com.salesforce.de.dg.heroku.repository.CompanyRepo;
 
+
 @Service
 @Transactional
 public class CompanyService {
 
 	@Autowired
 	private CompanyRepo compRepo;
+	
 	private LinkedHashMap<String,String> options;
 	
 	public Map<String,String> options() {
 		if(this.options == null){
-			List<Company> companies = compRepo.findAll(new Sort(Sort.Direction.ASC,"name"));
+			List<Company> companies = (List<Company>)compRepo.findAll(new Sort(Sort.Direction.ASC,"name"));
 	        this.options = new LinkedHashMap<String,String>();
 	        for(Company c: companies) {
 	            options.put(c.getId().toString(), c.getName());

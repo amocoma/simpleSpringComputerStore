@@ -89,13 +89,13 @@ public class Computer {
 	}
 
 	@RequestMapping(value="/view/{id}", method=RequestMethod.GET)
-	public String view(@PathVariable Long id, ModelMap model) {
+	public String view(@PathVariable Integer id, ModelMap model) {
 		model.addAttribute("computer", computerRepo.findOne(id));
 		return "computer/view";
 	}
 	
 	@RequestMapping(value="/edit/{id}", method=RequestMethod.GET)
-	public String edit(@PathVariable Long id, ModelMap model) {
+	public String edit(@PathVariable Integer id, ModelMap model) {
 		model.addAttribute("computer", computerRepo.findOne(id));
 		model.addAttribute("companies", companyService.options());
 		return "computer/edit";
