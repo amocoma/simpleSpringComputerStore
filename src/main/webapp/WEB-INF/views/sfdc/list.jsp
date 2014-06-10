@@ -22,12 +22,11 @@
 			  </button>
 			  <a class="navbar-brand" href="/">Computers database</a>
 			</div>
+			  <ul class="nav navbar-nav navbar-right">
+        		<li><a href="/computers">Browse Computers</a></li>
+			  </ul>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<div class="navbar-right">
-			        <a  href="/computers">Browse Computers</a>        
-			    </div>
-
 		    </div><!-- /.navbar-collapse -->
 		 </div>
 		</div>
@@ -46,7 +45,7 @@
 				    <c:forEach items="${af.accounts}" var="account" varStatus="status">
 					   <tr>
 						   <td>${account.id}<input id="accounts[${status.index}].id" name="accounts[${status.index}].id" type="hidden" value="${account.id}" /></td>
-					       <td>${account.sfid}</td>
+					       <td>${account.sfid}<input id="accounts[${status.index}].sfid" name="accounts[${status.index}].sfid" type="hidden" value="${account.sfdid}" /></td>
 					       <td><input id="accounts[${status.index}].name" name="accounts[${status.index}].name" placeholder="Name" class="form-control" value="${account.name}"/></td>
 					    </tr>
 					</c:forEach>

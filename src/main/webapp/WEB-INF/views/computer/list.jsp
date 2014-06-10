@@ -34,6 +34,9 @@
 			  </button>
 			  <a class="navbar-brand" href="/">Computers database</a>
 			</div>
+			  <ul class="nav navbar-nav navbar-right">
+        		<li><a href="/sfdc/list">Browse SFDC Accounts</a></li>
+			  </ul>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
@@ -43,9 +46,9 @@
 		        </div>
 		        <button type="submit" id="query" class="btn btn-default">SEARCH</button>
 		        <a class="btn btn-primary" id="add" href="/computers/add">Add a new computer</a>		
-		        <a  href="/sfdc">Browse Salesforce Accounts</a>        
 		      </form>
-		    </div><!-- /.navbar-collapse -->
+
+		    </div>
 		 </div>
 		</div>
 		<div class="container">
