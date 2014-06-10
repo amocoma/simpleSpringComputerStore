@@ -42,12 +42,14 @@ public class DataPopulator implements ApplicationListener<ContextRefreshedEvent>
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
         if (event.getApplicationContext().equals(this.applicationContext)) {
-            CompanyRepo companyRepository =
+                   	
+        	CompanyRepo companyRepository =
                     BeanFactoryUtils.beanOfTypeIncludingAncestors(this.applicationContext, CompanyRepo.class);
 
             if (companyRepository != null && companyRepository.count() == 0) {
                 populate(companyRepository);
             }
+            
             ComputerRepo computerRepository =
                     BeanFactoryUtils.beanOfTypeIncludingAncestors(this.applicationContext, ComputerRepo.class);
 

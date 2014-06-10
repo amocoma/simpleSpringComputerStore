@@ -42,7 +42,8 @@
 		          <input type="text" id="queryText" class="form-control" placeholder="Search">
 		        </div>
 		        <button type="submit" id="query" class="btn btn-default">SEARCH</button>
-		        <a class="btn btn-primary" id="add" href="/computers/add">Add a new computer</a>		        
+		        <a class="btn btn-primary" id="add" href="/computers/add">Add a new computer</a>		
+		        <a  href="/sfdc">Browse Salesforce Accounts</a>        
 		      </form>
 		    </div><!-- /.navbar-collapse -->
 		 </div>
