@@ -9,7 +9,8 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.core.env.Environment;
 
 @Configuration 
-@Profile("mysql-local")
+@Profile("mysql-local") 
+
 public class MySqlLocalDataSourceConfig extends AbstractLocalDataSourceConfig {
 
 	@Autowired

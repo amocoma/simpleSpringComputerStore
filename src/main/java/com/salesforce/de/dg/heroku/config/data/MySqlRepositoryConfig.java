@@ -6,8 +6,9 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
-@Profile("mysql")
+@Profile("mysql") 
 @EnableJpaRepositories("org.cloudfoundry.samples.music.repositories.jpa")
+
 public class MySqlRepositoryConfig extends AbstractJpaRepositoryConfig {
 
     protected String getHibernateDialect() {
