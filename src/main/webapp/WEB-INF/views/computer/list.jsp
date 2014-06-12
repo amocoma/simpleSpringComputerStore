@@ -34,9 +34,22 @@
 			  </button>
 			  <a class="navbar-brand" href="/">Computers database</a>
 			</div>
-			  <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-info-sign icon-white"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a><strong>Profiles:</strong> ${applicationContext.profileStr} </a></li>
+                        <li><a><strong>Services:</strong> ${applicationContext.serviceStr}</a></li>
+                        <li><a><strong>IP:</strong> ${applicationContext.host}</a></li>
+                        <li><a><strong>Port:</strong> ${applicationContext.port}</a></li>
+                    </ul>
+                </li>
+            </ul>
+			<ul class="nav navbar-nav navbar-right">
         		<li><a href="/sfdc/">Browse SFDC Accounts</a></li>
-			  </ul>
+			</ul>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
