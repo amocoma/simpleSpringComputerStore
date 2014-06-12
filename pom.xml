@@ -5,7 +5,7 @@
 	<artifactId>heroku</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Simple Spring Java App</name>
+	<name>Simple Spring Java App - Computer Store</name>
 	<properties>
 		<spring.version>4.0.1.RELEASE</spring.version>
 		<spring.jpa.version>1.5.0.RELEASE</spring.jpa.version>
