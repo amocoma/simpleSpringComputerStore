@@ -18,6 +18,7 @@ import com.salesforce.de.dg.heroku.repository.AccountRepo;
 @RequestMapping(value = { "/sfdc" })
 public class Salesforce {
 
+	/**
 	@Autowired
 	private AccountRepo accRepo;
 
@@ -69,4 +70,5 @@ public class Salesforce {
 			return list;
 		}
 	}
+	*/
 }

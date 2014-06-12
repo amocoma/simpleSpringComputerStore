@@ -7,6 +7,6 @@ import com.salesforce.de.dg.heroku.entity.Account;
 import com.salesforce.de.dg.heroku.repository.AccountRepo;
 
 // @Repository
-public interface AccountRepoJPA extends JpaRepository<Account, Integer>, AccountRepo{
+public interface AccountRepoJPA /** extends JpaRepository<Account, Integer>, AccountRepo**/{
 
 }
