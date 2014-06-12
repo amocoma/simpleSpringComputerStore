@@ -9,6 +9,7 @@ import javax.persistence.Transient;
 // @Table(name="Account", schema="salesforce")
 public class Account {
 
+	/**
 	@Id
 	public Integer id;
 
@@ -41,6 +42,6 @@ public class Account {
 		this.name = name;
 	}
 
-
+    **/
 
 }
