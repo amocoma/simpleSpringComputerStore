@@ -77,7 +77,6 @@ public class SpringApplicationContextInitializer implements ApplicationContextIn
         logger.info("Found serviceInfos: " + StringUtils.collectionToCommaDelimitedString(serviceInfos));
         int persistenceProfiles = 0;
         for (ServiceInfo serviceInfo : serviceInfos) {
-        	System.out.println(">>>>>>>>>>>>>>>>>> " + serviceInfo.getClass().getName());
         	if (serviceTypeToProfileName.containsKey(serviceInfo.getClass())) {
             	persistenceProfiles += validPersistenceProfiles.indexOf(serviceTypeToProfileName.get(serviceInfo.getClass()))!=-1?1:0;
                 profiles.add(serviceTypeToProfileName.get(serviceInfo.getClass()));

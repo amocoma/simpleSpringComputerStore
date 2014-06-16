@@ -7,7 +7,6 @@ public class TreasureDataServiceInfoCreator extends HerokuServiceInfoCreator<Tre
 
 		public TreasureDataServiceInfoCreator() {
 			super("trasuredata");
-			System.out.println(">>>>>>>>> <<<<<<<<<<<<<<<<<< " + TreasureDataServiceInfoCreator.class.getName());
 		}
 
 		public boolean accept(KeyValuePair serviceData) {
@@ -16,8 +15,6 @@ public class TreasureDataServiceInfoCreator extends HerokuServiceInfoCreator<Tre
 		
 		@Override
 		public TreasureDataInfo createServiceInfo(String id, String uri) {
-			System.out.println(" Create new DataInfo >>>>>>>>> <<<<<<<<<<<<<<<<<< " + TreasureDataServiceInfoCreator.class.getName());
-
 			return new TreasureDataInfo(HerokuUtil.computeServiceName(id));
 		}
 
