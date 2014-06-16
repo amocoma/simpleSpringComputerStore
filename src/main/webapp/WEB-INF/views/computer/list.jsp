@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" media="screen" href="/css/bootstrap.min.css"> 
         <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css"> 
         <script src="/js/jquery-1.11.1.min.js"></script>
-        
+       <script src="/js/bootstrap.min.js"></script>   
 		<script>
 		   var sort = "${sort}";
 		   var query = "${query}";
