@@ -90,7 +90,9 @@ public class Computer {
 
 	@RequestMapping(value="/view/{id}", method=RequestMethod.GET)
 	public String view(@PathVariable Integer id, ModelMap model) {
-		model.addAttribute("computer", computerRepo.findOne(id));
+		com.salesforce.de.dg.heroku.entity.Computer c = computerRepo.findOne(id)
+		model.addAttribute("computer", c);
+	    tdService.log("computer", c);	
 		return "computer/view";
 	}
 	

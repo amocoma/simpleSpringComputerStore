@@ -10,6 +10,7 @@ import org.springframework.cloud.Cloud;
 import org.springframework.cloud.service.ServiceInfo;
 import org.springframework.core.env.Environment;
 
+import com.salesforce.de.dg.heroku.service.TreasureDataService;
 import com.salesforce.de.dg.heroku.util.ApplicationContext;
 
 public abstract class AbstractWebController {
@@ -19,7 +20,9 @@ public abstract class AbstractWebController {
     private Environment springEnvironment;
 	@Autowired
 	private HttpServletRequest request;
-
+	@Autowired
+	protected TreasureDataService tdService;
+	
     public ApplicationContext appContext() {
     	String inetInfo[] = getInetInfo();
         return new ApplicationContext(springEnvironment.getActiveProfiles(), getServiceNames(), inetInfo[0], inetInfo[1]);
