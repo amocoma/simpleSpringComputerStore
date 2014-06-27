@@ -5,7 +5,7 @@ import org.springframework.cloud.service.ServiceInfo.ServiceLabel;
 
 @ServiceLabel("trasuredata")
 public class TreasureDataInfo extends BaseServiceInfo{
-
+	
 	public TreasureDataInfo(String id) {
 		super(id);
 		// TODO Auto-generated constructor stub

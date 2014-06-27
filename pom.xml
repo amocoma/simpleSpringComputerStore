@@ -7,13 +7,14 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Simple Spring Java App - Computer Store</name>
 	<properties>
-		<spring.version>4.0.1.RELEASE</spring.version>
-		<spring.jpa.version>1.5.0.RELEASE</spring.jpa.version>
+		<spring.version>4.0.2.RELEASE</spring.version>
+		<spring.jpa.version>1.6.0.RELEASE</spring.jpa.version>
+		<spring.data.rest>2.1.0.RELEASE</spring.data.rest>
 		<spring.cloud.version>0.9.10.RELEASE</spring.cloud.version>
-		<spring.boot.version>1.0.0.RELEASE</spring.boot.version>
+		<spring.boot.version>1.0.2.RELEASE</spring.boot.version>
 		<spring.data.mongodb.version>1.4.2.RELEASE</spring.data.mongodb.version>
 		<tomcat.version>7.0.53</tomcat.version>
-		<jackson.version>2.2.3</jackson.version>
+		<jackson.version>2.4.0</jackson.version>
 		<webapp.runner.version>7.0.34.1</webapp.runner.version>
 		<jstl.version>1.2</jstl.version>
 		<!-- database -->
@@ -47,6 +48,11 @@
 			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-rest-webmvc</artifactId>
+			<version>${spring.data.rest}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>${spring.version}</version>
@@ -61,6 +67,7 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 			<version>${spring.boot.version}</version>
 		</dependency>
+
 		<!-- SPRING CLOUD SUPPORT  -->
 		<dependency>
 		    <groupId>org.springframework.cloud</groupId>
@@ -208,7 +215,7 @@
 		</repository -->
 	</repositories>
 	<build>
-		<finalName>SpringMVC</finalName>
+		<finalName>HerokuSpringComputerStore</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

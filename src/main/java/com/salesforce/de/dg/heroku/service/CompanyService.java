@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.salesforce.de.dg.heroku.entity.Company;
+import com.salesforce.de.dg.heroku.model.entity.Company;
 import com.salesforce.de.dg.heroku.repository.CompanyRepo;
 
 

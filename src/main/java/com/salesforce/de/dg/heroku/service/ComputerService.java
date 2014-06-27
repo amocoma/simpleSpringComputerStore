@@ -8,7 +8,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.salesforce.de.dg.heroku.entity.Computer;
+import com.salesforce.de.dg.heroku.model.entity.Computer;
 import com.salesforce.de.dg.heroku.repository.ComputerRepo;
 
 @Service

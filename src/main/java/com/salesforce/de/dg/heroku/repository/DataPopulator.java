@@ -15,8 +15,8 @@ import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.salesforce.de.dg.heroku.entity.Company;
-import com.salesforce.de.dg.heroku.entity.Computer;
+import com.salesforce.de.dg.heroku.model.entity.Company;
+import com.salesforce.de.dg.heroku.model.entity.Computer;
 
 @Component
 public class DataPopulator implements ApplicationListener<ContextRefreshedEvent>, ApplicationContextAware  {

@@ -12,17 +12,16 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.servlet.DispatcherServlet;
 
 import com.salesforce.de.dg.heroku.config.AppConfig;
+import com.salesforce.de.dg.heroku.web.config.RestConfig;
 import com.salesforce.de.dg.heroku.web.config.WebConfig;
-
-
 
 public class ServletInitializer implements WebApplicationInitializer {
 
     @Override
     public void onStartup(ServletContext container) throws ServletException {
         configureAppContextInitializers(container, SpringApplicationContextInitializer.class.getName());
-        createRootAppContext(container, AppConfig.class);
-        createDispatcherServlet(container, WebConfig.class);
+        createRootAppContext(container, new Class[]{AppConfig.class} );       
+        createDispatcherServlet(container, WebConfig.class, RestConfig.class);
     }
 
     private void configureAppContextInitializers(ServletContext container, String... initClassNames) {

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -11,14 +12,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.salesforce.de.dg.heroku.entity.Account;
+import com.salesforce.de.dg.heroku.model.entity.Account;
 import com.salesforce.de.dg.heroku.repository.AccountRepo;
 
+@Profile(value="herokuconnect-cloud")
 @Controller
 @RequestMapping(value = { "/sfdc" })
 public class Salesforce {
 
-	/**
 	@Autowired
 	private AccountRepo accRepo;
 
@@ -70,5 +71,4 @@ public class Salesforce {
 			return list;
 		}
 	}
-	*/
 }

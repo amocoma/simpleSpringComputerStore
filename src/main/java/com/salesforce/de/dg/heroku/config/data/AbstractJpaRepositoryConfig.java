@@ -1,6 +1,6 @@
 package com.salesforce.de.dg.heroku.config.data;
 
-import com.salesforce.de.dg.heroku.entity.Company;
+import com.salesforce.de.dg.heroku.model.entity.Company;
 
 import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +34,7 @@ public abstract class AbstractJpaRepositoryConfig {
     
     protected LocalContainerEntityManagerFactoryBean createEntityManagerFactoryBean(DataSource dataSource, String dialectClassName) {		
     	Map<String, String> properties = new HashMap<String, String>();
-        properties.put(org.hibernate.cfg.Environment.HBM2DDL_AUTO, "create");
+        properties.put(org.hibernate.cfg.Environment.HBM2DDL_AUTO, "update");
         properties.put(org.hibernate.cfg.Environment.DIALECT, dialectClassName);
         properties.put(org.hibernate.cfg.Environment.SHOW_SQL, "true");
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();

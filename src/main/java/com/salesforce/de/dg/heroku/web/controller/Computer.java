@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.salesforce.de.dg.heroku.entity.Company;
+import com.salesforce.de.dg.heroku.model.entity.Company;
 import com.salesforce.de.dg.heroku.repository.CompanyRepo;
 import com.salesforce.de.dg.heroku.repository.ComputerRepo;
 import com.salesforce.de.dg.heroku.service.CompanyService;
@@ -42,7 +42,7 @@ public class Computer extends AbstractWebController{
 		if(pageNumber < 1){
 			pageNumber = 1;
 		};
-		Page<com.salesforce.de.dg.heroku.entity.Computer> page;
+		Page<com.salesforce.de.dg.heroku.model.entity.Computer> page;
 		if(query == null || query.trim().equals("")){
 			query = "";
 			page = computerService.getComputers(pageNumber, sort);
@@ -68,7 +68,7 @@ public class Computer extends AbstractWebController{
 	
 	@RequestMapping(value="/add", method = RequestMethod.GET)
 	public String newComputer(ModelMap model) {
-		com.salesforce.de.dg.heroku.entity.Computer c = new com.salesforce.de.dg.heroku.entity.Computer();
+		com.salesforce.de.dg.heroku.model.entity.Computer c = new com.salesforce.de.dg.heroku.model.entity.Computer();
 		c.setCompany(new Company());
 		model.addAttribute("computer", c);
 		model.addAttribute("companies", companyService.options());
@@ -76,7 +76,7 @@ public class Computer extends AbstractWebController{
 	}
 
 	@RequestMapping(value="/add", method = RequestMethod.POST)
-	public String saveNew(@Valid com.salesforce.de.dg.heroku.entity.Computer computer, BindingResult result, ModelMap model) {
+	public String saveNew(@Valid com.salesforce.de.dg.heroku.model.entity.Computer computer, BindingResult result, ModelMap model) {
        if(result.hasErrors()) {
     	   model.addAttribute("computer", computer);
     	   model.addAttribute("companies", companyService.options());
@@ -90,7 +90,7 @@ public class Computer extends AbstractWebController{
 
 	@RequestMapping(value="/view/{id}", method=RequestMethod.GET)
 	public String view(@PathVariable Integer id, ModelMap model) {
-		com.salesforce.de.dg.heroku.entity.Computer c = computerRepo.findOne(id);
+		com.salesforce.de.dg.heroku.model.entity.Computer c = computerRepo.findOne(id);
 		model.addAttribute("computer", c);
 	    tdService.log("computer", c);	
 		return "computer/view";
@@ -104,7 +104,7 @@ public class Computer extends AbstractWebController{
 	}
 	//@ModelAttribute com.salesforce.de.dg.heroku.entity.Computer computer
 	@RequestMapping(value="/edit", method = RequestMethod.POST)
-	public String edit(@Valid com.salesforce.de.dg.heroku.entity.Computer computer, BindingResult result, ModelMap model) {
+	public String edit(@Valid com.salesforce.de.dg.heroku.model.entity.Computer computer, BindingResult result, ModelMap model) {
 	       if(result.hasErrors()) {
 	    	   computer.name = "check";
 	    	   model.addAttribute("computer", computer);

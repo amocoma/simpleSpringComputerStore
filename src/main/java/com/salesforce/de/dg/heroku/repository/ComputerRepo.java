@@ -7,7 +7,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-import com.salesforce.de.dg.heroku.entity.Computer;
+import com.salesforce.de.dg.heroku.model.entity.Computer;
 
 public interface ComputerRepo extends PagingAndSortingRepository<Computer, Integer> {
 

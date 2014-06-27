@@ -12,6 +12,8 @@ import org.springframework.cloud.Cloud;
 import org.springframework.cloud.CloudException;
 import org.springframework.cloud.CloudFactory;
 import org.springframework.cloud.service.ServiceInfo;
+import org.springframework.cloud.service.common.CanvasConsumerInfo;
+import org.springframework.cloud.service.common.HerokuConnectInfo;
 import org.springframework.cloud.service.common.MongoServiceInfo;
 import org.springframework.cloud.service.common.MysqlServiceInfo;
 import org.springframework.cloud.service.common.PostgresqlServiceInfo;
@@ -27,7 +29,7 @@ public class SpringApplicationContextInitializer implements ApplicationContextIn
 
     private static final Map<Class<? extends ServiceInfo>, String> serviceTypeToProfileName =
             new HashMap<Class<? extends ServiceInfo>, String>();
-    private static final List<String> validAdditionalProfiles = Arrays.asList("treasuredata");
+    private static final List<String> validAdditionalProfiles = Arrays.asList("treasuredata", "canvasconsumer", "herokuconnect");
     private static final List<String> validPersistenceProfiles = Arrays.asList("postgres", "mongodb", "mysql");
 
     public static final String IN_MEMORY_PROFILE = "in-memory";
@@ -37,6 +39,8 @@ public class SpringApplicationContextInitializer implements ApplicationContextIn
         serviceTypeToProfileName.put(PostgresqlServiceInfo.class, "postgres");
         serviceTypeToProfileName.put(MysqlServiceInfo.class, "mysql");
         serviceTypeToProfileName.put(TreasureDataInfo.class, "treasuredata");
+        serviceTypeToProfileName.put(CanvasConsumerInfo.class, "canvasconsumer");
+        serviceTypeToProfileName.put(HerokuConnectInfo.class, "herokuconnect");
     }
 
     @Override

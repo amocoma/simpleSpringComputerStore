@@ -8,7 +8,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import com.salesforce.de.dg.heroku.entity.Computer;
+import com.salesforce.de.dg.heroku.model.entity.Computer;
 import com.salesforce.de.dg.heroku.repository.ComputerRepo;
 
 @Repository

@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.Cloud;
 import org.springframework.cloud.service.ServiceInfo;
+import org.springframework.cloud.service.common.HerokuConnectInfo;
 import org.springframework.core.env.Environment;
 
 import com.salesforce.de.dg.heroku.service.TreasureDataService;
@@ -19,13 +20,15 @@ public abstract class AbstractWebController {
 	@Autowired
     private Environment springEnvironment;
 	@Autowired
-	private HttpServletRequest request;
+	protected HttpServletRequest request;
 	@Autowired
 	protected TreasureDataService tdService;
+	@Autowired (required = false)
+	private HerokuConnectInfo herokuConnect;
 	
     public ApplicationContext appContext() {
     	String inetInfo[] = getInetInfo();
-        return new ApplicationContext(springEnvironment.getActiveProfiles(), getServiceNames(), inetInfo[0], inetInfo[1]);
+        return new ApplicationContext(springEnvironment.getActiveProfiles(), getServiceNames(), inetInfo[0], inetInfo[1], herokuConnect!=null);
     }
 	
     private String[] getInetInfo(){

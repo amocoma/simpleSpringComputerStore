@@ -9,19 +9,24 @@ public class ApplicationContext {
     private String serviceStr;
     private String host;
     private String port;
+    private String herokuConnect;
 
     public ApplicationContext(String[] profiles, String[] services) {
-        this.profiles = profiles;
-        this.services = services;
+    	this(profiles, services, "", "");
+    }
+
+    public ApplicationContext(String[] profiles, String[] services, String host, String port) {
+    	this(profiles, services, host, port, false);
     }
     
-    public ApplicationContext(String[] profiles, String[] services, String host, String port) {
+    public ApplicationContext(String[] profiles, String[] services, String host, String port, boolean herokuConnect) {
         this.profiles = profiles;
         this.profileStr = Arrays.toString(profiles);
         this.services = services;
         this.serviceStr = Arrays.toString(services);
         this.host = host;
         this.port = port;
+        this.herokuConnect = herokuConnect?"block":"none";
     }
     
     public String[] getProfiles() {
@@ -71,7 +76,13 @@ public class ApplicationContext {
 	public void setServiceStr(String serviceStr) {
 		this.serviceStr = serviceStr;
 	}
-	
-	
+
+	public String getHerokuConnect() {
+		return herokuConnect;
+	}
+
+	public void setHerokuConnect(String herokuConnect) {
+		this.herokuConnect = herokuConnect;
+	}
     
 }

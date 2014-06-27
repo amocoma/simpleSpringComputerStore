@@ -11,8 +11,6 @@ import javax.validation.constraints.NotNull;
 @Entity
 @SequenceGenerator(name="seqCompany", initialValue=1, allocationSize=100)
 public class Company {
-
-	private static final long serialVersionUID = 1L;
     
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator="seqCompany")

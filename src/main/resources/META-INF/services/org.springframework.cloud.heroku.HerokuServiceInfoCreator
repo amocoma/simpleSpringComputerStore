@@ -1,1 +1,3 @@
 org.springframework.cloud.heroku.TreasureDataServiceInfoCreator
+org.springframework.cloud.heroku.CanvasConsumerInfoCreator
+org.springframework.cloud.heroku.HerokuConnectInfoCreator

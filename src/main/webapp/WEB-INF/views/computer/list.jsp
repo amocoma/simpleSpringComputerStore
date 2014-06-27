@@ -7,7 +7,8 @@
         <link rel="stylesheet" type="text/css" media="screen" href="/css/bootstrap.min.css"> 
         <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css"> 
         <script src="/js/jquery-1.11.1.min.js"></script>
-       <script src="/js/bootstrap.min.js"></script>   
+<script src="/js/bootstrap.min.js"></script>
+        
 		<script>
 		   var sort = "${sort}";
 		   var query = "${query}";
@@ -47,7 +48,7 @@
                     </ul>
                 </li>
             </ul>
-			<ul class="nav navbar-nav navbar-right">
+			<ul class="nav navbar-nav navbar-right" style="display:${applicationContext.herokuConnect};">
         		<li><a href="/sfdc/">Browse SFDC Accounts</a></li>
 			</ul>
 			<!-- Collect the nav links, forms, and other content for toggling -->
