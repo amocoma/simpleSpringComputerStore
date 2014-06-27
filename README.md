@@ -1,6 +1,6 @@
 # Getting started on Heroku with a simple sample
 ## Overview
-## Steps to explore Herokus functionalities
+## Steps to explore Heroku's functionalities
 1. Clone the git repository: git clone https://github.com/amocoma/simpleSpringComputerStore.git
 2. Change into the directory: cd simpleSpringComputerStore
 3. Create heroku app and add heroku git remote to the git config: heroku create
