@@ -25,10 +25,3 @@
 22. Yes
 23. Check also the /api resource ....
 24. stay tuned
-
-
-
-
-	
-	Indent each line by at least 1 tab, or 4 spaces.
-    var Mou = exactlyTheAppIwant; 
