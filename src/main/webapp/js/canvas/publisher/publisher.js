@@ -23,7 +23,7 @@
 // POSSIBILITY OF SUCH DAMAGE.
 (function ($$){
 
-    var sr, mobile, postType, thumbnailUrl, parameter, title;
+    var sr, mobile, postType, thumbnailUrl, parameter, title, descriptionSet, auxTextSet, content;
 
     myPublisher = {
 
@@ -31,6 +31,9 @@
             sr = signedRequest;
             mobile = isMobile;
             postType= "Canvas";
+            descriptionSet = false;
+            auxTextSet = false;
+            content = false;
         },
 
         // Auto resize the iframe to fit the current content.
@@ -47,14 +50,19 @@
         },
         
         contentSet : function(value) {
-            $$.client.publish(sr.client, {name : "publisher.setValidForSubmit", payload : true});
+        	content = true;
+        	this.setPayload();
             $$.byId('parameters').value = JSON.stringify(value);
             title= "Show " + value.title;
             parameter = JSON.stringify(value);
             
         },
+        setPayload : function() {
+            $$.client.publish(sr.client, {name : "publisher.setValidForSubmit", payload : (content && auxTextSet && descriptionSet)});
+        },
         contentDeleted : function() {
-            $$.client.publish(sr.client, {name : "publisher.setValidForSubmit", payload : false});
+        	content = false;
+        	this.setPayload();
             $$.byId('parameters').value = JSON.stringify({});
             title="";
             parameter = JSON.stringify({});
@@ -72,6 +80,14 @@
                 $$.byId('location').innerHTML = sr.context.environment.displayLocation;
                 myPublisher.canvasOptions($$.byId('header-enabled'), "HideHeader");
                 myPublisher.canvasOptions($$.byId('share-enabled'), "HideShare");
+                $( "#auxText" ).change(function() {
+                	auxTextSet = (this.value != null) && (this.value.trim() != "");
+                	myPublisher.setPayload();
+             	});
+                $( "#description" ).change(function() {
+                	descriptionSet = (this.value != null) && (this.value.trim() != "");
+                	myPublisher.setPayload();
+               	});
             }
         },
 

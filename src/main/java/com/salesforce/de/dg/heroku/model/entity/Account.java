@@ -3,7 +3,6 @@ package com.salesforce.de.dg.heroku.model.entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 import org.springframework.context.annotation.Profile;
 
@@ -15,7 +14,6 @@ public class Account {
 	@Id
 	public Integer id;
 
-	@Transient
 	public String sfid;
 
 	public String name;
