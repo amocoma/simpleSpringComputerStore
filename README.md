@@ -1,4 +1,6 @@
-# Getting started on Heroku with a simple sample
+# Getting started on Heroku within 5 minutes
+But you will touch not only a running application in the cloud but also APM, BigData and a Salesforce Integration! So why are you waiting?
+
 ## Overview
 Abou the project:
 
@@ -57,7 +59,7 @@ Abou the project:
 	heroku addons:add newrelic:stark
 ####Bootstrap the Agent
 	heroku config:set JAVA_OPTS='-Xmx384m -Xss512k -XX:+UseCompressedOops -javaagent:target/dependency/newrelic-agent.jar'
-Do you recognized, that the app was restarted automatically because you changed teh env vars?!
+Do you recognized, that the app was restarted automatically because you changed the env vars?!
 #### Generate some load
 #### Open New Relic 
 through SSO from https://dashboard.heroku.com
