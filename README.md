@@ -3,7 +3,7 @@
 Abou the project:
 
 - java / Spring4
-- usage of: spring cloud, spring data, speing mvc, etc. 
+- usage of: spring cloud, spring data, spring mvc, etc. 
 - Hibernate
 - JPA
 - Persistence layer: In-memory, Postgres, mongo
@@ -13,7 +13,6 @@ Abou the project:
 ## Explore Heroku's functionalities
 ####Clone the git repository
 	git clone https://github.com/amocoma/simpleSpringComputerStore.git
-
 ####Change into the directory
 	cd simpleSpringComputerStore
 ####Create heroku app and add heroku git remote to the git config
@@ -41,7 +40,7 @@ Abou the project:
 ####Open up the browser and take a look at the app
 	heroku open
 ####Oops: an error :-( >> Check the logs: 
-	`heroku logs -t`
+	heroku logs -t
 ####Ahhh the postgres lib is missing ... 
 	vi pom.xml >> include the psql dependency
 ####Checkin the changes
@@ -59,7 +58,9 @@ Abou the project:
 ####Bootstrap the Agent
 	heroku config:set JAVA_OPTS='-Xmx384m -Xss512k -XX:+UseCompressedOops -javaagent:target/dependency/newrelic-agent.jar'
 Do you recognized, that the app was restarted automatically because you changed teh env vars?!
-#### Open New Relic through SSO from https://dashboard.heroku.com
+#### Generate some load
+#### Open New Relic 
+through SSO from https://dashboard.heroku.com
 ##Heroku Connect - Add-on
 ####Enable the Heroku Connect Add-On
 	heroku addons:add herokuconnect:test
