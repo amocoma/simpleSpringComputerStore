@@ -1,6 +1,8 @@
 # Getting started on Heroku within 5 minutes
 But you will touch not only a running application in the cloud but also APM, BigData and a Salesforce Integration! So why are you waiting?
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 ## Overview
 Abou the project:
 
