@@ -1,5 +1,5 @@
 {
-  "name": "Simple Java Spring Computer Store",
+  "name": "Simple Spring Computer Store",
   "description": "Java spring app to demonstrate how heroku is working and showing the possibilities",
   "repository": "https://github.com/amocoma/simpleSpringComputerStore",
   "keywords": ["java", "spiring", "jpa", "herokuc connect"]
